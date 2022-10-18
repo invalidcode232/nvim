@@ -17,7 +17,7 @@ use {
 }
 
 use {
-  "folke/trouble.nvim",
+  "arafatamim/trouble.nvim",
   requires = "kyazdani42/nvim-web-devicons",
   config = function()
     require("trouble").setup {}
