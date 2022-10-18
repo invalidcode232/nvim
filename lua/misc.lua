@@ -3,14 +3,11 @@ use {
 }
 
 use {
-    'numToStr/Comment.nvim',
-    config = function()
-        require('Comment').setup()
-    end
+  'gelguy/wilder.nvim',
 }
 
 use {
-  'gelguy/wilder.nvim',
+	'dstein64/vim-startuptime'
 }
 
 local wilder = require("wilder")
