@@ -76,6 +76,23 @@ for i, server in pairs(CONFIGURED_SERVERS) do
   }
 end
 
+lspconfig.eslint.setup({
+  on_attach = function(client, bufnr)
+    client.server_capabilities.documentFormattingProvider = true
+    if client.server_capabilities.documentFormattingProvider then
+      local au_lsp = vim.api.nvim_create_augroup("eslint_lsp", { clear = true })
+      vim.api.nvim_create_autocmd("BufWritePre", {
+        pattern = "*",
+        callback = function()
+          vim.lsp.buf.format({ async = true })
+        end,
+        group = au_lsp,
+      })
+    end
+  end,
+	lsp_flags = lsp_flags,
+})
+
 -- Lspsaga Mappings
 keyset('n', 'gd', '<cmd>Lspsaga peek_definition<CR>', silent)
 keyset('n', '<leader>cd', '<cmd>Lspsaga show_cursor_diagnostics<CR>', silent)

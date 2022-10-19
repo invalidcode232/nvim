@@ -56,7 +56,7 @@ use {
 	'lewis6991/impatient.nvim'
 }
 
--- require('impatient')
+require('impatient')
 
 vim.o.clipboard = 'unnamedplus'
 
