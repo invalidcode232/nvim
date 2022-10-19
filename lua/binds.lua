@@ -15,9 +15,9 @@ keyset("n", "<A-h>", ":bprev<cr>")
 keyset("n", "<A-l>", ":bnext<cr>")
 keyset("n", "<A-x>", ":BufferClose<cr>")
 
-keyset("n", "<C-`>", ":ToggleTerm direction=vertical size=100<cr>")
-keyset("t", "<C-`>", "<C-\\><C-N>:ToggleTerm direction=vertical size=100<cr>")
-keyset("i", "<C-`>", "<C-\\><C-N>:ToggleTerm direction=vertical size=100<cr>")
+keyset("n", "<C-`>", ":ToggleTerm direction=vertical size=80<cr>")
+keyset("t", "<C-`>", "<C-\\><C-N>:ToggleTerm direction=vertical size=80<cr>")
+keyset("i", "<C-`>", "<C-\\><C-N>:ToggleTerm direction=vertical size=80<cr>")
 
 vim.cmd([[
     :tnoremap <C-h> <C-\><C-N><C-w>h
