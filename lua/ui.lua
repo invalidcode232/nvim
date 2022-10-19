@@ -1,42 +1,42 @@
 -- Nvim tree
 use {
-	"nvim-tree/nvim-tree.lua",
-	tag = "nightly",
+	'nvim-tree/nvim-tree.lua',
+	tag = 'nightly',
 }
 
 use {
-	"kyazdani42/nvim-web-devicons"
+	'kyazdani42/nvim-web-devicons'
 }
 
 -- Statusline
 use {
-	"nvim-lualine/lualine.nvim"
+	'nvim-lualine/lualine.nvim'
 }
 
 -- Main colorscheme
 use {
-	"catppuccin/nvim",
-	as = "catppuccin",
+	'catppuccin/nvim',
+	as = 'catppuccin',
 	config = function()
-		vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
-		require("catppuccin").setup()
-		vim.api.nvim_command "colorscheme catppuccin"
+		vim.g.catppuccin_flavour = 'mocha' -- latte, frappe, macchiato, mocha
+		require('catppuccin').setup()
+		vim.api.nvim_command 'colorscheme catppuccin'
 	end
 }
 
 -- Cool dashboard
 use {
-	"goolord/alpha-nvim",
-	requires = { "kyazdani42/nvim-web-devicons" },
+	'goolord/alpha-nvim',
+	requires = { 'kyazdani42/nvim-web-devicons' },
 	config = function()
-		require "alpha".setup(require "alpha.themes.dashboard".config)
+		require 'alpha'.setup(require 'alpha.themes.dashboard'.config)
 	end
 }
 
 -- Buffer (tabs) management
 use {
-	"romgrk/barbar.nvim",
-	requires = { "kyazdani42/nvim-web-devicons" },
+	'romgrk/barbar.nvim',
+	requires = { 'kyazdani42/nvim-web-devicons' },
 }
 
 use {
@@ -45,7 +45,11 @@ use {
 	requires = { { 'nvim-lua/plenary.nvim' } }
 }
 
+<<<<<<< HEAD
+require('nvim-tree').setup()
+=======
 require("nvim-tree").setup()
+>>>>>>> refs/remotes/origin/main
 
 
 
@@ -76,33 +80,59 @@ require("nvim-tree").setup()
 --     lualine_z = { 'location' },
 --   },
 --   tabline = {},
+<<<<<<< HEAD
+--   extensions = {'nvim-tree'},
+-- }
+
+require('lualine').setup({
+	-- lualine_a = {
+	-- 	{
+	-- 		'diagnostics',
+	-- 		sources = {'nvim_diagnostic', 'nvim_lsp'},
+ --      sections = { 'error', 'warn', 'info', 'hint' },
+	--
+ --      diagnostics_color = {
+ --        error = 'DiagnosticError', -- Changes diagnostics' error color.
+ --        warn  = 'DiagnosticWarn',  -- Changes diagnostics' warn color.
+ --        info  = 'DiagnosticInfo',  -- Changes diagnostics' info color.
+ --        hint  = 'DiagnosticHint',  -- Changes diagnostics' hint color.
+ --      },
+ --      symbols = {error = 'E', warn = 'W', info = 'I', hint = 'H'},
+ --      colored = true,           -- Displays diagnostics status in color if set to true.
+ --      update_in_insert = false, -- Update diagnostics in insert mode.
+ --      always_visible = false,   -- Show diagnostics even if there are none.
+	-- 	}
+	-- },
+=======
 --   extensions = {"nvim-tree"},
 -- }
 
 require("lualine").setup({
+>>>>>>> refs/remotes/origin/main
 	extensions = {
-		"nvim-tree"
+		'nvim-tree',
+		'toggleterm',
 	}
 })
 
 
 -- Fix BarBar with nvim-tree
-local nvim_tree_events = require("nvim-tree.events")
-local bufferline_api = require("bufferline.api")
+local nvim_tree_events = require('nvim-tree.events')
+local bufferline_api = require('bufferline.api')
 
 local function get_tree_size()
-	return require "nvim-tree.view".View.width
+	return require 'nvim-tree.view'.View.width
 end
 
-nvim_tree_events.subscribe("TreeOpen", function()
+nvim_tree_events.subscribe('TreeOpen', function()
 	bufferline_api.set_offset(get_tree_size())
 end)
 
-nvim_tree_events.subscribe("Resize", function()
+nvim_tree_events.subscribe('Resize', function()
 	bufferline_api.set_offset(get_tree_size())
 end)
 
-nvim_tree_events.subscribe("TreeClose", function()
+nvim_tree_events.subscribe('TreeClose', function()
 	bufferline_api.set_offset(0)
 end)
 

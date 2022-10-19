@@ -1,23 +1,31 @@
-keyset("n", "<C-s>", ":w<cr>")
-keyset("n", "<Space>h", ":nohl<cr>")
+keyset('n', '<C-s>', ':w<cr>', silent)
+keyset('n', '<Space>h', ':nohl<cr>', silent)
 
-keyset("n", "<Space>e", ":NvimTreeToggle<cr>")
+keyset('n', '<Space>e', ':NvimTreeToggle<cr>', silent)
 
 keyset("n", "<Space>/", "<Plug>(comment_toggle_linewise_current)")
 keyset("v", "<Space>/", "<Plug>(comment_toggle_linewise_visual)")
 
-keyset("n", "<Space>ff", ":Telescope find_files<cr>")
-keyset("n", "<Space>fg", ":Telescope live_grep<cr>")
-keyset("n", "<Space>fb", ":Telescope buffers<cr>")
-keyset("n", "<Space>fh", ":Telescope help_tags<cr>")
+keyset('n', '<Space>ff', ':Telescope find_files<cr>', silent)
+keyset('n', '<Space>fg', ':Telescope live_grep<cr>', silent)
+keyset('n', '<Space>fb', ':Telescope buffers<cr>', silent)
+keyset('n', '<Space>fh', ':Telescope help_tags<cr>', silent)
 
-keyset("n", "<A-h>", ":bprev<cr>")
-keyset("n", "<A-l>", ":bnext<cr>")
-keyset("n", "<A-x>", ":BufferClose<cr>")
+keyset('n', '<A-h>', ':bprev<cr>', silent)
+keyset('n', '<A-l>', ':bnext<cr>', silent)
+keyset('n', '<A-x>', ':BufferClose<cr>', silent)
 
+<<<<<<< HEAD
+keyset('n', '<C-`>', ':ToggleTerm direction=vertical size=80<cr>', silent)
+keyset('t', '<C-`>', '<C-\\><C-N>:ToggleTerm direction=vertical size=80<cr>', silent)
+keyset('i', '<C-`>', '<C-\\><C-N>:ToggleTerm direction=vertical size=80<cr>', silent)
+
+keyset('n', '<Space>t', ':TroubleToggle<cr>', silent)
+=======
 keyset("n", "<C-`>", ":ToggleTerm direction=vertical size=80<cr>")
 keyset("t", "<C-`>", "<C-\\><C-N>:ToggleTerm direction=vertical size=80<cr>")
 keyset("i", "<C-`>", "<C-\\><C-N>:ToggleTerm direction=vertical size=80<cr>")
+>>>>>>> refs/remotes/origin/main
 
 vim.cmd([[
     :tnoremap <C-h> <C-\><C-N><C-w>h
@@ -32,5 +40,5 @@ vim.cmd([[
     :nnoremap <C-j> <C-w>j
     :nnoremap <C-k> <C-w>k
     :nnoremap <C-l> <C-w>l
-]])
+]], silent)
 

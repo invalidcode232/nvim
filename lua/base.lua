@@ -1,7 +1,7 @@
-local install_path = vim.fn.stdpath "data" .. "/site/pack/packer/opt/packer.nvim"
+local install_path = vim.fn.stdpath 'data' .. '/site/pack/packer/opt/packer.nvim'
 
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
-	vim.fn.system { "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path }
+	vim.fn.system { 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path }
 end
 
 vim.cmd 'packadd packer.nvim'
@@ -32,6 +32,8 @@ g = vim.g
 diagnostic = vim.diagnostic
 keyset = vim.keymap.set
 
+silent = { silent = true }
+
 -- Add packer itself
 use {
 	'wbthomason/packer.nvim',
@@ -51,10 +53,10 @@ use {
 }
 
 use {
-	"lewis6991/impatient.nvim"
+	'lewis6991/impatient.nvim'
 }
 
-require("impatient")
+require('impatient')
 
-vim.o.clipboard = "unnamedplus"
+vim.o.clipboard = 'unnamedplus'
 
