@@ -45,7 +45,11 @@ use {
 	requires = { { 'nvim-lua/plenary.nvim' } }
 }
 
+<<<<<<< HEAD
 require('nvim-tree').setup()
+=======
+require("nvim-tree").setup()
+>>>>>>> refs/remotes/origin/main
 
 
 
@@ -76,6 +80,7 @@ require('nvim-tree').setup()
 --     lualine_z = { 'location' },
 --   },
 --   tabline = {},
+<<<<<<< HEAD
 --   extensions = {'nvim-tree'},
 -- }
 
@@ -98,6 +103,12 @@ require('lualine').setup({
  --      always_visible = false,   -- Show diagnostics even if there are none.
 	-- 	}
 	-- },
+=======
+--   extensions = {"nvim-tree"},
+-- }
+
+require("lualine").setup({
+>>>>>>> refs/remotes/origin/main
 	extensions = {
 		'nvim-tree',
 		'toggleterm',

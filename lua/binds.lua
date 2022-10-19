@@ -15,11 +15,17 @@ keyset('n', '<A-h>', ':bprev<cr>', silent)
 keyset('n', '<A-l>', ':bnext<cr>', silent)
 keyset('n', '<A-x>', ':BufferClose<cr>', silent)
 
+<<<<<<< HEAD
 keyset('n', '<C-`>', ':ToggleTerm direction=vertical size=80<cr>', silent)
 keyset('t', '<C-`>', '<C-\\><C-N>:ToggleTerm direction=vertical size=80<cr>', silent)
 keyset('i', '<C-`>', '<C-\\><C-N>:ToggleTerm direction=vertical size=80<cr>', silent)
 
 keyset('n', '<Space>t', ':TroubleToggle<cr>', silent)
+=======
+keyset("n", "<C-`>", ":ToggleTerm direction=vertical size=80<cr>")
+keyset("t", "<C-`>", "<C-\\><C-N>:ToggleTerm direction=vertical size=80<cr>")
+keyset("i", "<C-`>", "<C-\\><C-N>:ToggleTerm direction=vertical size=80<cr>")
+>>>>>>> refs/remotes/origin/main
 
 vim.cmd([[
     :tnoremap <C-h> <C-\><C-N><C-w>h
