@@ -39,3 +39,6 @@ vim.cmd([[
     :nnoremap <C-l> <C-w>l
 ]], silent)
 
+keyset('n', '<Space>/', 'gcc')
+keyset('v', '<Space>/', 'gc')
+

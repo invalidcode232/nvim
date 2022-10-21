@@ -5,10 +5,11 @@ vim.opt.shiftwidth = 2
 vim.cmd "set noshowmode"
 
 require 'base'
-require 'lsp'
-require 'lsp_binds'
-require 'misc'
-require 'ui'
+
+require 'core.misc'.setup()
+require 'core.ui'.setup()
+require 'core.lsp'.setup()
+
 require 'binds'
 
 vim.o.clipboard = "unnamedplus"

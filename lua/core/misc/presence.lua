@@ -1,0 +1,3 @@
+use {
+	'andweeb/presence.nvim'
+}
