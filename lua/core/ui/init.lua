@@ -9,9 +9,11 @@ local function setup()
 	require 'core.ui.nvim-tree'
 	require 'core.ui.alpha'
 	require 'core.ui.barbar'
+	-- require 'core.ui.bufferline'
 	require 'core.ui.colors'
 	require 'core.ui.lualine'
 	require 'core.ui.telescope'
+	-- require 'core.ui.noice'
 end
 
 return {
