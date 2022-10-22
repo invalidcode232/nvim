@@ -20,9 +20,9 @@ keyset('t', '<C-`>', '<C-\\><C-N>:ToggleTerm direction=vertical size=80<cr>', si
 keyset('i', '<C-`>', '<C-\\><C-N>:ToggleTerm direction=vertical size=80<cr>', silent)
 
 keyset('n', '<Space>t', ':TroubleToggle<cr>', silent)
-keyset("n", "<C-`>", ":ToggleTerm direction=vertical size=80<cr>")
-keyset("t", "<C-`>", "<C-\\><C-N>:ToggleTerm direction=vertical size=80<cr>")
-keyset("i", "<C-`>", "<C-\\><C-N>:ToggleTerm direction=vertical size=80<cr>")
+keyset("n", "<C-`>", ":ToggleTerm direction=vertical size=80<cr>", silent)
+keyset("t", "<C-`>", "<C-\\><C-N>:ToggleTerm direction=vertical size=80<cr>", silent)
+keyset("i", "<C-`>", "<C-\\><C-N>:ToggleTerm direction=vertical size=80<cr>", silent)
 
 vim.cmd([[
     :tnoremap <C-h> <C-\><C-N><C-w>h
@@ -39,6 +39,16 @@ vim.cmd([[
     :nnoremap <C-l> <C-w>l
 ]], silent)
 
+vim.cmd([[
+    nnoremap <silent> <F5> <Cmd>lua require'dap'.continue()<CR>
+    nnoremap <silent> <F10> <Cmd>lua require'dap'.step_over()<CR>
+    nnoremap <silent> <F11> <Cmd>lua require'dap'.step_into()<CR>
+    nnoremap <silent> <F12> <Cmd>lua require'dap'.step_out()<CR>
+    nnoremap <silent> <Leader>b <Cmd>lua require'dap'.toggle_breakpoint()<CR>
+    nnoremap <silent> <Leader>B <Cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>
+    nnoremap <silent> <Leader>lp <Cmd>lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>
+    nnoremap <silent> <Leader>dr <Cmd>lua require'dap'.repl.open()<CR>
+    nnoremap <silent> <Leader>dl <Cmd>lua require'dap'.run_last()<CR>
+]])
 -- keyset('n', '<Space>/', 'gcc')
 -- keyset('v', '<Space>/', 'gc')
-

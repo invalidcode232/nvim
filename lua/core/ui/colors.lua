@@ -1,7 +1,6 @@
-
 -- Main colorscheme
 use {
-	'catppuccin/nvim',
+	'invalidcode232/nvim-1',
 	as = 'catppuccin',
 	config = function()
 		vim.g.catppuccin_flavour = 'mocha' -- latte, frappe, macchiato, mocha
