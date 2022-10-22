@@ -11,8 +11,8 @@ keyset('n', '<Space>fg', ':Telescope live_grep<cr>', silent)
 keyset('n', '<Space>fb', ':Telescope buffers<cr>', silent)
 keyset('n', '<Space>fh', ':Telescope help_tags<cr>', silent)
 
-keyset('n', '<A-h>', ':bprev<cr>', silent)
-keyset('n', '<A-l>', ':bnext<cr>', silent)
+keyset('n', '<A-h>', ':BufferPrev<cr>', silent)
+keyset('n', '<A-l>', ':BufferNext<cr>', silent)
 keyset('n', '<A-x>', ':BufferClose<cr>', silent)
 
 keyset('n', '<C-`>', ':ToggleTerm direction=vertical size=80<cr>', silent)
@@ -39,6 +39,6 @@ vim.cmd([[
     :nnoremap <C-l> <C-w>l
 ]], silent)
 
-keyset('n', '<Space>/', 'gcc')
-keyset('v', '<Space>/', 'gc')
+-- keyset('n', '<Space>/', 'gcc')
+-- keyset('v', '<Space>/', 'gc')
 

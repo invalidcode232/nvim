@@ -23,3 +23,12 @@ end)
 nvim_tree_events.subscribe('TreeClose', function()
 	bufferline_api.set_offset(0)
 end)
+
+-- vim.api.nvim_create_autocmd('BufWinEnter', {
+-- 	pattern = '*',
+-- 	callback = function ()
+--       require'bufferline.api'.set_offset(31, 'FileTree')
+-- 	end
+-- })
+
+

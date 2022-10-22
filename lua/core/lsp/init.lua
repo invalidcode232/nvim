@@ -19,6 +19,7 @@ local function setup()
   require 'core.lsp.lspsaga'
   require 'core.lsp.markdown-preview'
   require 'core.lsp.trouble'
+	require 'core.lsp.rust-tools'
 end
 
 return {
