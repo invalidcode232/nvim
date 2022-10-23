@@ -1,4 +1,3 @@
-
 -- Main colorscheme
 use {
 	'catppuccin/nvim',

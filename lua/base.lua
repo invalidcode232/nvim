@@ -12,16 +12,16 @@ vim.cmd 'packadd packer.nvim'
 packer = require('packer')
 
 packer.init {
-		auto_clean = true,
-		compile_on_sync = true,
-		auto_reload_compiled = true,
-		display = {
-			open_fn = function()
-				return require 'packer.util'.float {
-					border = 'single'
-				}
-			end
-		}
+	auto_clean = true,
+	compile_on_sync = true,
+	auto_reload_compiled = true,
+	display = {
+		open_fn = function()
+			return require 'packer.util'.float {
+				border = 'single'
+			}
+		end
+	}
 }
 
 -- Handy api bindings
@@ -60,6 +60,3 @@ use {
 }
 
 require('impatient')
-
-vim.o.clipboard = 'unnamedplus'
-
