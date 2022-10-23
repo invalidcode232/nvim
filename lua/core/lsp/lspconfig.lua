@@ -25,6 +25,7 @@ local CONFIGURED_SERVERS = {
 	'sumneko_lua',
 	'tailwindcss',
 	'prismals',
+	'eslint',
 }
 
 local on_attach = function(client, bufnr)

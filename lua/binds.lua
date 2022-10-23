@@ -37,7 +37,7 @@ vim.cmd([[
     :nnoremap <C-j> <C-w>j
     :nnoremap <C-k> <C-w>k
     :nnoremap <C-l> <C-w>l
-]], silent)
+]])
 
 vim.cmd([[
     nnoremap <silent> <F5> <Cmd>lua require'dap'.continue()<CR>
