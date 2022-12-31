@@ -19,6 +19,7 @@ local lsp_flags = {
 }
 
 local CONFIGURED_SERVERS = {
+	'clangd',
 	'pyright',
 	'tsserver',
 	'rust_analyzer',
