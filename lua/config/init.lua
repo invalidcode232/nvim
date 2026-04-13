@@ -1,14 +1,16 @@
 -- Starting point of all our configurations
 
--- IMPORTANT: Always put remap, then lazy, and then everything else!
-require("config.remap")
-require("config.lazy") -- This will load all the plugin (and their respective configs/mappings) in lua/plugins
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
 
--- Configure our LSP, mainly just enabling them as their configurations are handled by lspconfig
+-- Setup lazy as plugin manager
+require("config.lazy")
+
+-- Other keymaps
+require("config.keymaps")
+
+-- Configure our LSP 
 require("config.lsp")
-
--- Use icons for our signs
-require("config.signs")
 
 -- General configuration
 vim.cmd.colorscheme "gruvbox"
@@ -20,9 +22,21 @@ vim.opt.expandtab = true
 vim.opt.relativenumber = true
 vim.opt.number = true
 
-vim.opt.showmode = false
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
+vim.opt.clipboard = "unnamedplus"
+
+vim.opt.breakindent = true
+
+vim.opt.showmode = false
 vim.opt.cursorline = true
+vim.opt.undofile = true
+vim.opt.hlsearch = true
+vim.opt.mouse = "a"
+vim.opt.termguicolors = true
+vim.opt.signcolumn = "yes"
+vim.opt.wrap = true
 
 -- Enable nvim 0.12's experimental ui2
 require('vim._core.ui2').enable({})
