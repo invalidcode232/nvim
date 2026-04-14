@@ -9,11 +9,11 @@ require("config.lazy")
 -- Other keymaps
 require("config.keymaps")
 
--- Configure our LSP 
+-- Configure our LSP
 require("config.lsp")
 
 -- General configuration
-vim.cmd.colorscheme "gruvbox"
+vim.cmd.colorscheme("gruvbox")
 
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
@@ -39,4 +39,4 @@ vim.opt.signcolumn = "yes"
 vim.opt.wrap = true
 
 -- Enable nvim 0.12's experimental ui2
-require('vim._core.ui2').enable({})
+require("vim._core.ui2").enable({})
