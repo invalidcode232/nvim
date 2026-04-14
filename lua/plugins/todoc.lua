@@ -1,6 +1,7 @@
 return {
     "https://github.com/folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
+    event = { "BufReadPost", "BufWritePost", "BufNewFile" },
     cmd = { "TodoTrouble", "TodoTelescope" },
     keys = {
         { "]t", function() require("todo-comments").jump_next() end, desc = "Next Todo Comment" },
