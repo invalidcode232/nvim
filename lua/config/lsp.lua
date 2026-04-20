@@ -1,7 +1,7 @@
 -- LSP related settings
 
 -- Enable the following LSPs
-local lsps = { "lua_ls", "pyright", "clangd", "ts_ls", "tailwindcss", "oxlint", "oxfmt" }
+local lsps = { "lua_ls", "pyright", "clangd", "ts_ls", "tailwindcss", "oxlint", "oxfmt", "jsonls" }
 vim.lsp.enable(lsps)
 
 -- Use icons as signs
